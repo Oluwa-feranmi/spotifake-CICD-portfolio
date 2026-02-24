@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./static/songs:/app/static/songs
+    environment:
+      - FLASK_ENV=development

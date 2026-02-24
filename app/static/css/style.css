@@ -1,0 +1,40 @@
+/* Custom overrides on top of Tailwind + Spotify vibe */
+
+/* Hide scrollbar but keep functionality */
+html {
+  scrollbar-width: none;          /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, Edge */
+}
+
+/* Song card hover scale + shadow */
+.song-card {
+  transition: all 0.25s ease;
+}
+.song-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Player progress bar (simple version) */
+#progress {
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+  overflow: hidden;
+}
+#progress-filled {
+  height: 100%;
+  width: 0%;
+  background: #1db954;            /* Spotify green */
+  transition: width 0.1s linear;
+}
+
+/* Text ellipsis for long titles */
+.truncate-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
