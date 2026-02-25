@@ -5,7 +5,7 @@ A responsive, Spotify-inspired music web app built with Flask, deployed automati
 Live Demo: http://3.8.22.83:8000  
 *(Temporary public IP — may change on redeploy; check latest pipeline run for updated DNS/IP)*
 
-<image-card alt="Spotifake Home Page" src="Screenshot%202026-02-25%20171920.png" ></image-card>  
+![Spotifake Home Page](spotifake-home.png) 
 
 ## Features
 
@@ -56,11 +56,12 @@ EC2 Instance (t3.micro)
    ```bash
    git clone https://github.com/Oluwa-feranmi/spotifake-CICD-portfolio.git
    cd spotifake-CICD-portfolio
-
+    ```
+   
 2. Run with Docker (recommended)
    ```bash
    docker compose up --build
-
+    ```
    Open: http://localhost:5000
 Or run directly (without Docker)
 ```bash
@@ -68,6 +69,7 @@ python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 flask run
+```
 
 Deployment on AWS (Manual Setup Reference)
 This project uses a full AWS CI/CD pipeline:
