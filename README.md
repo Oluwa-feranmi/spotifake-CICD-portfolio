@@ -1,5 +1,10 @@
 # Spotifake - Flask Music App with Full AWS CI/CD Pipeline
 
+![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/Oluwa-feranmi/spotifake-CICD-portfolio?style=social)
+
 A responsive, Spotify-inspired music web app built with Flask, deployed automatically to AWS EC2 using a complete CI/CD pipeline (GitHub → AWS CodePipeline → CodeBuild → CodeDeploy).
 
 Live Demo: http://3.8.22.83:8000  
