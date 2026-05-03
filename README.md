@@ -32,18 +32,22 @@ Live Demo: http://3.8.22.83:8000
 - **WSGI Server (prod)**: Gunicorn
 
 ## Architecture Overview
-GitHub (main branch)
-↓ (push / pull request)
-AWS CodePipeline
-↓
-AWS CodeBuild ──► (install deps, validate)
-↓
-AWS CodeDeploy ──► (copy files to EC2, run hooks)
-↓
-EC2 Instance (t3.micro)
-└─► /var/www/spotifake
-└─► gunicorn → app:create_app() → port 8000
-
+```mermaid
+graph LR
+    A[GitHub<br/>main branch] -->|push / PR| B[AWS CodePipeline]
+    B --> C[AWS CodeBuild<br/>install deps, validate]
+    C --> D[AWS CodeDeploy<br/>copy files, run hooks]
+    D --> E[EC2 Instance t3.micro]
+    
+    E --> F[/var/www/spotifake/]
+    E --> G[gunicorn → port 8000]
+    
+    style A fill:#24292e,stroke:#6e5494,color:#fff
+    style B fill:#ff9900,stroke:#232f3e,color:#fff
+    style C fill:#ff9900,stroke:#232f3e,color:#fff
+    style D fill:#ff9900,stroke:#232f3e,color:#fff
+    style E fill:#ec7211,stroke:#232f3e,color:#fff
+```
 
 ## CI/CD Pipeline Details
 
